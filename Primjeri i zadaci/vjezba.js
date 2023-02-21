@@ -1,6 +1,6 @@
 var names = ["John", "Jane", "Bob", , "Mike"];
 names.push("Katarina")
-//let text = ""
+//var text = ""
 
 for (var i = 0; i < names.length; i++) {
     /*if (i === 2) {break;}
