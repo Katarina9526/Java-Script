@@ -1,8 +1,10 @@
 var auto = {
-    marka: "VW",
+    brand: {
+        marka: "VW",
+        model: "Golf",
+        godina: 2022,  
+    },
     gorivo: "benzin",
-    model: "Golf",
-    godina: 2022,
     boja: "crvena",
     maxBrzina: 180,
     trenutnaBrzina: 0,
@@ -27,7 +29,7 @@ for(let key in auto) {
     }
 }
 
-/*console.log("ja vozim auto marke: " + auto.marka + ": model " + auto.model);
+/*console.log("ja vozim auto marke: " + auto.brand.marka + ": model " + auto.brand.model);
 console.log("auto vozi brzinom " + auto.trenutnaBrzina);
 console.log("auto nakon ubrzanja vozi brzinom " + auto.ubrzaj(10));
 console.log("auto nakon kocenja vozi brzinom " + auto.zakoci(2));*/
