@@ -11,7 +11,7 @@ var auto = {
         return this.trenutnaBrzina;
     },
     zakoci: function(brojSekundi) {
-        while(this.trenutnaBrzina > 0 || brojSekundi >0 ){
+        while(this.trenutnaBrzina > 0 || brojSekundi > 0 ){
             this.trenutnaBrzina -= 2;
             console.log("trenutna brzina pri kocenju je: " + this.trenutnaBrzina);
             brojSekundi--;
@@ -21,12 +21,19 @@ var auto = {
     brojKotaca: 4
 };
 
-console.log("ja vozim auto marke: " + auto.marka);
+for(let key in auto) {
+    if(auto.propertyIsEnumerable(key)) {
+        //console.log("kljuc: " + key + ": vrijednost: " + auto[key]);
+    }
+}
 
+/*console.log("ja vozim auto marke: " + auto.marka + ": model " + auto.model);
 console.log("auto vozi brzinom " + auto.trenutnaBrzina);
 console.log("auto nakon ubrzanja vozi brzinom " + auto.ubrzaj(10));
-console.log("auto nakon kocenja vozi brzinom " + auto.zakoci(2));
+console.log("auto nakon kocenja vozi brzinom " + auto.zakoci(2));*/
 
+var json = JSON.stringify(auto);
+console.log(json);
 
 
 
