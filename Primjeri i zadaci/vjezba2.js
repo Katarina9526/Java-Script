@@ -208,24 +208,10 @@ const zadaca = "\n\nZADACA \n- Napisi funkciju koja ce za zadani password provje
  console.log(zadaca);
 
  const checkString = (value) => {
-	if (typeof value !== 'string') {
-		throw new Error('Value is not a string!');
-	}
+	const trimmed = skratiNaPrvih10Znakova(value);
 
-	console.log('Password: ', value);
+	return daLiJePasswordBroj(trimmed) && jedinstveniZnakovi(trimmed);
+}
 
-	const trimmed = value.substring(0, 10);
-	console.log('Trimmed: ', trimmed);
-
-	const isNumber = !isNaN(trimmed);
-	console.log('Is number: ', isNumber);
-
-	const isUnique = new Set(value).size === value.length;
-	console.log('Is unique: ', isUnique);
-
-	return isNumber && isUnique;
- }
-
- console.log('GOOD password: ', checkString(dobro));
- console.log('BAD password: ', checkString(lose));
- checkString(true);
+console.log('1234567890:', checkString(dobro));
+console.log('1123456:', checkString(lose));
