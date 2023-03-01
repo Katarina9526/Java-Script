@@ -1,3 +1,8 @@
+
+//ispis tablice množenja za prvih 10 brojeva (svaki sa svakim)
+
+
+
 for (let i = 1; i <= 10; i++) {
     console.log("-------------")
     for (let j = 1; j <= 10; j++) {
