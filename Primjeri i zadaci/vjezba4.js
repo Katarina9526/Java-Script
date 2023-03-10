@@ -30,5 +30,5 @@ var character = {
     return rndVal;
   }
 
-  console.log(character);
+  console.log(character.prototype());
   //console.log(proto1);
